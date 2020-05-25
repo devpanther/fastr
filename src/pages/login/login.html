@@ -1,0 +1,101 @@
+<ion-content style="margin-top: 30px;background-color: #fff !important;">
+
+  <img src="https://res.cloudinary.com/giftie/image/upload/v1580739744/AirBox_uos3js.png" alt="" srcset=""
+    style="display: block;margin-left: auto;margin-right: auto;width: 50%; margin-top: 10px;">
+
+
+  <!-- segment -->
+
+  <ion-toolbar style="padding: 4px;
+  min-height: 56px;
+  display: block;" no-border-top>
+    <ion-segment style="padding: 10px;background-color: white !important;" [(ngModel)]="pet">
+      <ion-segment-button value="login">
+        Login
+      </ion-segment-button>
+      <ion-segment-button value="signup">
+        Sign Up
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <!-- login -->
+
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'login'">
+      <div style="margin-top: 10px;">
+        <ion-item style="margin: 10px auto;width: 98%">
+          <ion-label style="font-size: 15px;" floating>Email / Phone Number</ion-label>
+          <ion-input style="border-bottom: 
+          1px solid rgb(243, 243, 243);
+          border-top: none;
+          border-right: none;
+          border-left: none;" type="text"></ion-input>
+        </ion-item>
+        <ion-item style="margin: 10px auto;width: 98%">
+          <ion-label style="font-size: 15px;" floating>Password</ion-label>
+          <ion-input style="border-bottom: 
+          1px solid rgb(243, 243, 243);
+          border-top: none;
+          border-right: none;
+          border-left: none;" type="password"></ion-input>
+        </ion-item>
+        <button style="width: 80%; display: block;margin-left: auto;margin-right: auto; margin-top: 10px;" ion-button
+          color="primary" (click)="openPage()">Login</button>
+        <div style="margin: 25px 80px; " description="" text-center="">
+          <ion-row class="row">
+            <ion-col style="text-align: center" class="col" col-12="" no-margin="" no-padding="">
+              <p no-margin="" no-padding="">Forgot password?
+                <a class="">Reset your password</a>
+              </p>
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+    </ion-list>
+
+    <!-- sign up -->
+
+    <ion-list *ngSwitchCase="'signup'">
+
+      <div style="margin-top: 10px;">
+        <ion-item style="margin: 10px auto;width: 98%">
+          <ion-label style="font-size: 15px;" floating>Name</ion-label>
+          <ion-input style="border-bottom: 
+          1px solid rgb(243, 243, 243);
+          border-top: none;
+          border-right: none;
+          border-left: none;" type="text"></ion-input>
+        </ion-item>
+        <ion-item style="margin: 10px auto;width: 98%">
+          <ion-label style="font-size: 15px;" floating>Email Address / Phone</ion-label>
+          <ion-input style="border-bottom: 
+          1px solid rgb(243, 243, 243);
+          border-top: none;
+          border-right: none;
+          border-left: none;" type="text"></ion-input>
+        </ion-item>
+        <ion-item style="margin: 10px auto;width: 98%">
+          <ion-label style="font-size: 15px;" floating>Password</ion-label>
+          <ion-input style="border-bottom: 
+          1px solid rgb(243, 243, 243);
+          border-top: none;
+          border-right: none;
+          border-left: none;" type="password"></ion-input>
+        </ion-item>
+        <button style="width: 80%; display: block;margin-left: auto;margin-right: auto; margin-top: 10px;" ion-button
+          color="primary" (click)="openPage()">Sign Up</button>
+          <div style="margin: 25px 80px; " description="" text-center="">
+            <ion-row class="row">
+              <ion-col style="text-align: center" class="col" col-12="" no-margin="" no-padding="">
+                <p no-margin="" no-padding="">Forgot password?
+                  <a class="">Reset your password</a>
+                </p>
+              </ion-col>
+            </ion-row>
+          </div>
+      </div>
+
+    </ion-list>
+  </div>
+</ion-content>
